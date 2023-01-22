@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 editor.apply();
                 Intent intent;
                 intent = new Intent(this, UdpBackgroundService.class);
-                intent.putExtra("udpPort", 1234);
+                intent.putExtra("udpPort", udpPort);
                 startForegroundService(intent);
                 Toast.makeText(this, "待ち受けを開始しました。", Toast.LENGTH_LONG).show();
                 break;
